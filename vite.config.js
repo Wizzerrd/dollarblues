@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/dollarblues/' : '/', // prod vs dev
+  base: '/dollarblues/',
+  build: {
+    outDir: 'dist',
+  },
 })
