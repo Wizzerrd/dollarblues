@@ -22,7 +22,7 @@ type Props = {
 export function ExchangeRateChart({ data }: Props) {
     console.log("Hello Data: ", data)
     return (
-        <ResponsiveContainer width="80%" height={400}>
+        <ResponsiveContainer width="85%" height={400}>
             <LineChart data={data}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="date" />

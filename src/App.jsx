@@ -22,6 +22,15 @@ function App() {
 
   return (
     <>
+      <h1>Dollar Blues</h1>
+      <h2>The "blue dollar" in Argentina is the unofficial exchange rate for USD, often higher than the official rate due to currency controls and inflation.
+        <br />
+        <br />
+        When the blue dollar aligns with the official rate, it signals reduced currency market distortions and can indicate improved economic stability and access to foreign exchange.
+        <br />
+        <br />
+        When the blue dollar and official rate match, it can indicate more stability for the peso. It suggests that fewer people are rushing to buy dollars on the unofficial market,
+        likely because they feel less need to protect their money from losing value in pesos.</h2>
       <ExchangeRateChart data={data.slice(data.length - displayDays, data.length)} />
       <button onClick={() => setDisplayDays(7)}>1 Week</button>
       <button onClick={() => setDisplayDays(30)}>1 Month</button>
