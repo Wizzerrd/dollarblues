@@ -31,7 +31,6 @@ function App() {
         <br />
         When the blue dollar and official rate match, it can indicate more stability for the peso. It suggests that fewer people are rushing to buy dollars on the unofficial market,
         likely because they feel less need to protect their money from losing value in pesos.</h2>
-      <ExchangeRateChart data={data.slice(data.length - displayDays, data.length)} />
       <button onClick={() => setDisplayDays(7)}>1 Week</button>
       <button onClick={() => setDisplayDays(30)}>1 Month</button>
       {/* <button onClick={() => setDisplayDays(30)}>3 Months</button> */}
@@ -40,6 +39,7 @@ function App() {
       <button onClick={() => setDisplayDays(365)}>1 Year</button>
       <button onClick={() => setDisplayDays(1825)}>5 Years</button>
       <button onClick={() => setDisplayDays(data.length)}>Max</button>
+      <ExchangeRateChart data={data.slice(data.length - displayDays, data.length)} />
     </>
   )
 }
