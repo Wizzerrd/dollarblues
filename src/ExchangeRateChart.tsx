@@ -21,8 +21,17 @@ type Props = {
 
 export function ExchangeRateChart({ data }: Props) {
     return (
-        <div style={{ width: '100%', height: '1200px' }}>
-            <ResponsiveContainer width="90%" height="33%">
+        <div style={{
+            width: '100%',
+            height: '1200px',
+            maxWidth: '100vw',       // prevent horizontal overflow
+            overflow: 'hidden',
+            margin: '0 auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center'
+        }}>
+            <ResponsiveContainer width="100%" height="33%">
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="date" />
@@ -34,7 +43,7 @@ export function ExchangeRateChart({ data }: Props) {
                 </LineChart>
             </ResponsiveContainer>
 
-            <ResponsiveContainer width="90%" height="33%">
+            <ResponsiveContainer width="100%" height="33%">
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="date" />
@@ -46,7 +55,7 @@ export function ExchangeRateChart({ data }: Props) {
                 </LineChart>
             </ResponsiveContainer>
 
-            <ResponsiveContainer width="90%" height="33%">
+            <ResponsiveContainer width="100%" height="33%">
                 <LineChart data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="date" />
